@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardiology</title>
+    <style>
+        .my_cardio{
+            background-image: url('https://t3.ftcdn.net/jpg/07/13/57/84/360_F_713578474_ntazf68jlruzS5pim40YnpObO73AaYGM.jpg');
+            
+            padding: 1cm;
+        }
+        .my_opacity{
+        margin: 1cm;
+        background-color: #ffffff;
+        border: 1px solid rgb(12, 17, 49);
+        opacity: 0.8;
+        border-width: medium;
+    }
+
+    button {     
+      background-color: #d32626c8;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-top: 0.5rem;
+      
+      transition: background-color 0.3s ease;
+    }
+
+    /* For moving blocks+hover */ 
+
+    .my_cardio_1{                    /* The articles (big,to seperate each block but under one horizontal block) */
+        display: flex;
+        justify-content: space-evenly;
+        gap: 1cm;
+    }
+.card {                              /* Name of each divs */
+  width: 300px;
+ 
+  background-color:#4158D0;
+  background-image: linear-gradient(43deg, #e48d8d 0%, #e45f4a 46%, rgba(255, 0, 0, 0.81) 100%);
+  border-radius: 8px;
+  
+  overflow: hidden;
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+  cursor: pointer;
+}
+
+.card-content {
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+.card-content .card-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: inherit;
+  
+}
+
+.card-content .card-para {
+  color: inherit;
+  opacity: 0.8;
+  font-size: 20px;
+}
+
+.card:hover {
+  transform: rotateY(10deg) rotateX(10deg) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.1));
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+  z-index: 1;
+}
+
+.card:hover:before {
+  transform: translateX(-100%);
+}
+
+.card:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.1));
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+  z-index: 1;
+}
+
+.card:hover:after {
+  transform: translateX(100%);
+}
+</style>
+</head>
+
+<body>
+       <!--The Huge Article-->
+
+ <div class="my_cardio">
+    <div class="my_opacity">
+    <h2 style="font-size: xx-large; font-weight: bold; text-align: center;">Welcome to Cardiology Blog</h2>
+   <strong style="font-size: x-large ;"><span style="font-size: 2rem;">🏃‍♂️ </span>Cardiovascular  Risk in Young Adults: A Growing Concern</strong><br>
+   <p style="padding: 15px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"> For decades, cardiovascular disease (CVD) has been viewed as a condition that primarily affects older adults. However, an alarming trend has emerged: <strong> increasing number of young adults, even those in their 20s and 30s, are being diagnosed with hypertension, heart attacks, and other cardiac conditions.</strong> This shift is not just anecdotal—it’s supported by epidemiological data that reveals a silent epidemic affecting a generation traditionally considered too young for heart disease.
+
+    This article explores the causes behind the rise in cardiovascular risk among young adults, early warning signs, preventive measures, and why this trend should be a priority for clinicians and public health officials alike.
+</p>
+<p style="font-size: 20px; font-weight: bold; padding: 5px;">The Alarming Rise in Cardiovascular Risk Factors</p>
+<p><b>📊 Growing Data</b></p>
+<ul style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+    <li>A 2020 study in JAMA Cardiology found a 15% increase in heart attack hospitalizations among individuals aged 25–44 over the past two decades.</li>
+    <li>In India,<strong> 1 in 4 heart attack patients is now under the age of 40</strong>, according to the Indian Heart Journal.</li>
+    <li>The INTERHEART study, involving participants from 52 countries, highlighted <strong> modified risk factors</strong> such as smoking, poor diet, and physical inactivity as key contributors to early-onset heart disease.</li>
+</ul>
+<p style="font-size: 20px; font-weight: bold; padding: 5px;">Hypertension and Diabetes: Early Onset, Long Impact</p>
+<p style="padding: 15px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><strong> Young adults diagnosed with hypertension or type 2 diabetes </strong> in their 20s face a lifetime of elevated cardiovascular risk. Both conditions are often undiagnosed due to lack of routine health checks at this age, meaning damage is done before any symptoms appear.</p>
+<ul style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+    <li><strong>“Silent killers” like high blood pressure and insulin resistance</strong>gradually impair vascular function and increase plaque formation in arteries.</li>
+    <li>The <strong>longer duration of exposure </strong>to these conditions dramatically raises the risk of heart attacks, strokes, and kidney disease in middle age.</li>
+</ul>
+<p style="font-size: 20px; font-weight: bold; padding: 5px;">The Role of Mental Health</p>
+<p style="padding: 15px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Emerging research strongly links <strong>  chronic stress, anxiety, and depression</strong>with increased cardiovascular risk. Young adults today face immense psychological pressure, from academic competition to job insecurity and social media comparison.</p>
+<ul style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+    <li> <strong>Cortisol and adrenaline surges </strong>, associated with chronic stress, can lead to inflammation and endothelial damage.</li>
+    <li> <strong> Sleep deprivation</strong>further exacerbates metabolic imbalance and blood pressure elevation.</li>
+</ul>
+<p style="padding: 15px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Addressing mental health is thus not optional—it’s an essential part of cardiac prevention strategies.</p>
+<p style="font-size: 20px; font-weight: bold; padding: 5px;">Conclusion</p>
+<p style="padding: 15px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">The growing incidence of cardiovascular disease among young adults is a <strong>red flag that cannot be ignored. </strong> It demands a proactive, multidimensional approach—from doctors, families, schools, and policymakers.
+
+    By raising awareness, encouraging healthy lifestyle choices, and implementing early screening, we can reverse this trend and ensure that the young adults of today become the <strong> heart-healthy elders of tomorrow.</strong>
+    
+    </p>
+</div>
+ </div> 
+
+   <!--For 4 small articles-->
+
+ <p style="text-align: center; color:red;font-size: x-large;font-weight: bold;">Know more</p>
+ <div class="my_cardio_1">
+
+<div class="card">
+    <div class="card-content">
+      <p class="card-title">Predictive Analytics and Risk Assessment
+      </p>
+      <p class="card-para">
+        
+            Forecast the likelihood of cardiac events
+            Personalize treatment plans
+            Identify high-risk patients even before symptoms appear
+        
+      </p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-content">
+      <p class="card-title">New Frontiers in Heart Failure Treatment
+      </p>
+      <p class="card-para">
+        Recent advancements in heart failure management include the use of SGLT2 inhibitors, originally developed for diabetes. Studies show these drugs significantly reduce hospitalizations and mortality in heart failure patients, even without diabetes.
+
+      </p>
+  </div>
+  </div>
+
+  <div class="card">
+    <div class="card-content">
+      <p class="card-title">Genetics and Personalized Cardiology
+      </p>
+      <p class="card-para">
+        Genetic testing is paving the way for personalized cardiac care. From inherited arrhythmias to hypertrophic cardiomyopathy, gene-based diagnostics help tailor treatment and identify at-risk family members
+      </p>
+  </div>
+  </div>
+
+  <div class="card">
+    <div class="card-content">
+      <p class="card-title">Women and Heart Disease: The Silent Epidemic
+      </p>
+      <p class="card-para">
+        Heart disease is the leading cause of death among women, yet its symptoms often go unnoticed. Unlike the classic chest pain seen in men, women may experience fatigue, nausea, or neck pain. Lack of awareness leads to misdiagnosis or delayed treatment.
+      </p>
+  </div>
+  </div>
+</div><br><br>
+ <button><a href="article.html">Click her to go back</a></button>
+</body>
+</html>

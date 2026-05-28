@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clintel</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background:  #e6f2ff;
+      color: #003366;
+      margin: 0;
+      padding: 0;
+      
+    }
+    .logo img{
+        position: absolute;
+        top: 10px;
+        height: 80px;
+    }
+    header {
+      background-color: #007acc;
+      
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .search-box{
+        padding: 7px;
+        border:  1px rgba(199, 192,192, 0.5);
+        background-color: rgba(175,211,233,0.349);
+        width: 300px;
+        background-position: 10px;
+        background-size: 16px;
+        left: 2cm;
+        outline: auto;
+        margin-left: 0.5cm;
+        margin-top: 0.5cm;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background-color: #f0f8ff;
+      padding: 1rem 0;
+      border-bottom: 1px solid #cce6ff;
+    }
+    nav a {
+      text-decoration: none;
+      color: #007acc;
+      font-weight: bold;
+      margin: 0 1rem;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      transition: background-colour 0.3s;
+    }
+    nav a:hover {
+      background-color: #d9f0ff;
+    }
+    section {
+      padding: 2rem;
+      
+      margin: auto;
+    }
+    .in_the_middle{             /* To arrange first two blocks in middle */
+        max-width: 1000px;
+    }
+    .eminent_profile{           /* only for the word */
+        text-align: center;    
+        font-size:xx-large;
+        
+        
+    }
+    .doctor_1 img{            /* First set of group picture */
+        position:absolute;
+        right:5cm;
+        top: 7cm
+        
+
+    }
+     .first{                 /* 2nd block from the top (This is only for seperating the items)*/
+                              
+        /* the center align of words is done inline */
+        display: flex;
+        justify-content:space-evenly;          
+        padding: 1rem;
+        gap: 1cm;
+        
+    }
+    .card1 {                      /* Examples */
+        
+      background-image: linear-gradient(to bottom right,rgba(224, 221, 232, 0.508), rgba(85, 179, 226, 0.573),rgb(40, 51, 179));
+      padding: 2rem;
+      margin-bottom: 2rem;
+      transition: transform 0.3s;
+    }
+    .crash{                      /* Suggestions(big,to seperate each block but under one horizontal block) */
+        display: flex;
+        justify-content: space-evenly;
+        
+    }
+    .circle_photo{
+        border-radius: 100%;
+    }
+    .profile_1{        
+        text-align:center;
+        width: 200px;
+        border: 1px solid black;
+        padding: 25px;
+        border-width:medium;
+        background-image:  linear-gradient(to bottom right,lightblue,lavender);
+       
+    }
+    .profile_2{
+        text-align:center;
+        width: 200px;
+        border: 1px solid black;
+        padding: 25px;
+        border-width:medium;
+        background-image:  linear-gradient(to bottom right,lightblue,lavender)
+
+    }
+    .profile_3{
+        text-align:center;
+        width: 200px;
+        border: 1px solid black;
+        padding: 25px;
+        border-width:medium;
+        background-image:  linear-gradient(to bottom right,lightblue,lavender)
+    }
+    .profile_4{
+        text-align:center;
+        width: 200px;
+        border: 1px solid black;
+        padding: 25px;
+        border-width:medium;
+        background-image:  linear-gradient(to bottom right,lightblue,lavender)
+
+    }
+    .card2{          /* Jobs part */
+    
+      
+      background-image: linear-gradient(rgba(85, 179, 226, 0.573),white);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0);
+      padding: 2rem;
+      transition: transform 0.3s;
+      
+    }
+    .city{          /* Select country n city */
+        font-size:x-large;
+        font-weight: bold;
+    }
+    .my_animation{
+        text-align: center;
+        border: black;
+        border-width: 1cm;
+        width: 100px;
+  height: 1cm;
+  background-color:rgba(0, 0, 255, 0.722);
+  animation-name: inch;
+  animation-duration: 4s;
+  
+  animation-iteration-count: infinite;
+    }
+    @keyframes inch {
+  
+  90% {background-color: rgba(119, 213, 245, 0.981);}
+  
+}
+    
+    .doc_jobs{       /* jobs (big,to seperate each block but under one horizontal block) */
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .doc_jobs_1{
+        text-align: center;
+        
+    }
+    .doc_jobs_2{
+        text-align: center;
+        
+    }
+    .doc_jobs_3{
+        text-align: center;
+        
+    }
+    .doc_jobs_4{
+        text-align: center;
+        
+    }
+    .doc_jobs_5{
+        text-align: center;
+    }
+    .card3{                   /* Communities */
+        background-image: url('https://t4.ftcdn.net/jpg/04/71/37/41/360_F_471374128_8993i5Rs3r3WIFpnrlBNnxXUCLdb53V7.jpg');
+        padding: 2cm;
+        }
+    .my_opacity{
+        margin: 1cm;
+        background-color: #ffffff;
+        border: 1px solid rgb(12, 17, 49);
+        opacity: 0.8;
+        border-width: medium;
+    }
+    .card4{                /* Events */
+        background-color:rgba(78, 172, 203, 0.308) ;
+        padding: 1cm;
+        border-radius:15px;
+        
+    }
+   
+    .card5:hover:hover {      /* Latest Articles*/
+      transform: translateY(-5px);
+      background-image: linear-gradient(  rgba(88, 192, 161, 0.384),rgba(105, 191, 208, 0.506),lavender);
+      padding: 1.5cm;
+      border-radius:15px;
+    }
+    h2 {
+      color: #005b99;
+      margin-bottom: 1rem;
+    }
+    button {
+      background-color: #007acc;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-top: 0.5rem;
+      
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #005b99;
+    }
+    
+    strong {
+      color: #003366;
+    }
+   
+  </style>
+</head>
+<body>
+    
+    <header>Clintel</header>
+    <div class="logo">
+        <img src="https://www.shutterstock.com/image-vector/medical-logo-design-that-combines-260nw-2477034865.jpg" alt="logo">
+    </div>
+    <input class="search-box" type="text" placeholder="Search here">
+  <nav>
+    <a href="#About">About</a>
+    <a href="#profile">Profile</a>
+    <a href="#jobs">Jobs</a>
+    <a href="#groups">Groups</a>
+    <a href="#articles">Articles</a>
+   
+  </nav>
+
+  <section id="About" class="in_the_middle">
+    
+    <h1><pre>
+<span style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;font-size:xx-large ;">
+ Connect with 
+ Healthcare <span style="color: #0070c9  ; ">Professionals</span>
+ Worldwide</pre></h1>
+
+ <div class="doctor_1">
+ <img src="https://img.freepik.com/premium-photo/team-doctors-looking-laptop_13339-164634.jpg" alt="doctors" height="270">
+ </div>
+ <br>
+ <pre> <h4> <span style="color: rgba(11, 11, 11, 0.727); font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">  Join the exclusive network for doctors, nurses, specialists, 
+   and healthcare providers to collaborate, share knowledge, 
+   and advance your career.</span></span></pre></h4>
+ <button>Join now</button> 
+ <p style="font-family:Verdana, Geneva, Tahoma, sans-serif;font-size: small;color: rgb(106, 104, 104);"> Already a member? <a href="">Sign in</a></p>
+    </div>
+ </section>
+
+  <section id="About" class="in_the_middle">
+<h1><span style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: larger;text-align: center;"> Why join Clintel?</h1></span><br>
+<span style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;color: rgba(11, 11, 11, 0.727);" ><b>Our Platform is specifically designed to address the unique networking needs of healthcare Professionals.</b></span><br><br><br>
+    
+        <div class="first" style="background-color: white; text-align: center;">
+                <div class="logo1">
+                    <img src="https://png.pngtree.com/png-vector/20220531/ourmid/pngtree-man-icon-vector-blue-circle-isolated-on-white-background-png-image_4775380.png" height="100">
+                <h3>Exclusive Professional Network</h3>
+                Connect with verified healthcare proffesionals across specialities and institutions.
+                </div>
+            
+                <div class="logo2">
+                    <img src="https://png.pngtree.com/png-vector/20220531/ourmid/pngtree-book-page-icon-vector-blue-circle-isolated-on-white-background-png-image_4775212.png" height="100">
+                    
+                <h3>Knowledge Sharing</h3>
+                Access case studies,research papers,and discussions on the latest medical advancements.
+                </div>
+               <div class="logo3">
+                    <img src="https://png.pngtree.com/png-vector/20220624/ourmid/pngtree-building-teamwork-icon-blue-logo-png-image_5377819.png" height="100">
+                <h3>CME Opportunities</h3>
+                Discuss and participate in continuing medical education event and webinars.
+                </div>
+
+                <div class="logo4">
+                    <img src="https://png.pngtree.com/png-vector/20220531/ourmid/pngtree-best-graph-icon-vector-blue-circle-isolated-on-white-background-png-image_4772670.png" height="100">
+           
+                <h3>Career Growth</h3>
+                Find job opportunities,mentors,and collaborate on research projects with peers.
+                </div>
+        </div>
+    </section>
+
+   <!--Examples-->
+   <!--1 card-->
+
+ <section id="profile">
+    <h1 class="eminent_profile">Eminent Profiles</h1><br><br>
+    <div class="card1">
+      <h2>Dr.Vanitha N</h2>
+      <img src="https://bbh.org.in/wp-content/uploads/2020/03/IMG_4360-260x352.jpg" alt="photo" height="150px">
+    
+      <p><strong>Specialty:</strong> Cardiologist</p>
+      <p><strong>Hospital:</strong> Baptist Hospital,Banglore</p>
+      <p><strong>Education:</strong> MBBS,DNB -Gen. Medicine,DNB- Cardiology<br><p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"><b>Experience of 16 Years</b></p></p>
+      <!--HTML DOM has been used below-->
+      <p id="vani" style="display: none;">
+         In a video message from an interventional cardiologist Vanitha N at Bangalore Baptist Hospital, the importance of managing hypertension is emphasized on the eve of World Hypertension Day. The cardiologist highlights the growing incidence of hypertension in India and globally, associating it with severe complications such as heart attacks, heart failure, strokes, and kidney issues. The physician stresses the necessity of regular check-ups and medication management to effectively control hypertension. Alongside medical intervention, lifestyle modifications are crucial, including regular exercise, reduced salt intake, avoidance of junk foods, and managing other health conditions like diabetes and high cholesterol. Special attention is directed toward the rising hypertension rates among women, particularly during pregnancy, underlining the need for vigilance and control to ensure the safety of both mother and baby. The video concludes with reminders to reduce stress through physical activity and meditation to help manage hypertension effectively.  </p>
+      <button onclick="document.getElementById('vani').style.display='block'">
+        Click here to know more </button>
+    </div>
+    
+    <div class="card1">
+        <h2>Dr.Madhu Sudhan</h2>
+        <img src="https://imagesx.practo.com/providers/dr-madhusudhan-cardiothoracic-and-vascular-surgeon-bangalore-ce4a2952-e572-4af3-8809-0e506c6719b2.jpg?i_type=t_100x100-4x" alt="photo" height="150px">
+        <p><strong>Specialty:</strong> Cardiosurgeon</p>
+      <p><strong>Hospital:</strong> Aster hospital,Banglore</p>
+      <p><strong>Education:</strong> MBBS, MS - General Surgery, MCh - Cardio Thoracic and Vascular Surgery Cardiothoracic and Vascular Surgeon<br>
+      <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" ><b>Experience of 20 Years Overall <br> (13 years as specialist)</b></p>
+      <p id="madhu" style="display: none;"> 
+        Dr. Madhusudana N, a distinguished Consultant in Cardiovascular and Thoracic Surgery, brings a wealth of experience spanning over 15 years to the field. His remarkable journey includes serving as a Consultant Cardiothoracic and transplant surgeon at BGS Global Gleneagles Hospital, Bengaluru, where he specialized in intricate Heart-lung transplant surgeries, mechanical circulatory devices, and LVAD devices. Dr. Madhusudana N is renowned for his exceptional skills in this domain, making him a sought-after professional.His extensive expertise extends to both adult and pediatric cardiac surgeries, as well as thoracic surgeries.Known for his unwavering professionalism and commitment to delivering best-in-class care, Dr. Madhusudana N leads by example. His priority is the health and well-being of those entrusted to his care, reflecting a commitment to excellence that sets him apart in the field of Cardiovascular and Thoracic Surgery. </p>
+      <button onclick="document.getElementById('madhu').style.display='block'">
+        Click here to know more</button>
+    </div>
+</section>
+
+<!--Suggestions(1 card)-->
+
+    <h2 style="color: rgba(1, 1, 74, 0.841); margin-left: 1cm;">Suggested Profiles<br></h2>
+    <section id="profile" class="crash">
+
+<div class="profile_1">
+    <img src="https://thumbs.dreamstime.com/b/indian-female-medical-doctor-portrait-uniform-hand-holding-test-report-standing-white-background-81003009.jpg" alt="photo" height="150"  class="circle_photo">
+    <p>Dr.Natasha</p>
+    <p> MBBS|MS - Neurosurgeon and General Surgery </p>
+    <p>Researcher and Full-Time Surgeon(India)</p>
+    <button id="for_following_01"  style="background-color: #56ade3; border-radius: 10px; margin-bottom: 5px; ">Follow</button>
+    
+<!--JS been used-->
+<script>
+  document.getElementById("for_following_01").addEventListener("click", function () {
+    this.textContent = "Following";
+  });
+</script>
+<button style="background-color: white;border-radius: 10px; margin-bottom: 5px; color: #000;">Message</button>
+
+</div>
+    <div class="profile_2">
+        <img src="https://aishwaryamtrust.com/custom/img/about-us/drpal-0.jpg" alt="photo" height="150" class="circle_photo">
+        <p> Dr.Pal Manickam</p>
+        <p>MBBS| MPH | Gastroenterology</p>
+        <p>Consultant Gastroenterologist (California)</p>
+        <button id="for_following_02" style="background-color: #56ade3; border-radius: 10px; margin-bottom: 5px; ">Follow</button>
+        <script>
+            document.getElementById("for_following_02").addEventListener("click", function () {
+              this.textContent = "Following";
+            });
+          </script>
+          <button style="background-color: white;border-radius: 10px; margin-bottom: 5px; color: #000;">Message</button>
+          
+        
+
+    </div>
+    <div class="profile_3">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaj58Wre_dWeG9CoObtxFmVMz1xC-qNi8UnuS3iziJjzrMIJ2cNtzZcnWBhUUU5wQ40dk&usqp=CAU" alt="photo" height="150" class="circle_photo">
+        <p>Dr. Jushya Bhartia Sarin</p>
+        <p>MBBS|MD Dermatologist|Diploma in Allergy</p>
+        <p>Dermatologist(UK)</p>
+        <button type="button" style="background-color: #56ade3; border-radius: 10px; margin-bottom: 5px; ">Follow</button>
+        <button style="background-color: white;border-radius: 10px; margin-bottom: 5px; color: #000;">Message</button>
+        
+    </div>
+    <div class="profile_4">
+        <img src="https://max-website20-images.s3.ap-south-1.amazonaws.com/Dr_Dabas_1_f53becaa11.jpeg" alt="photo" height="150" class="circle_photo">
+        <p>Dr. Surender Kumar Dabas</p>
+        <p>MBBS|MS(General Surgery)|DNB(Oncology)</p>
+        <p>Surgical Oncology and Robotic Surgery specialist(India)</p>
+        <button type="button" style="background-color: #56ade3; border-radius: 10px; margin-bottom: 5px; ">Follow</button>
+        <button style="background-color: white;border-radius: 10px; margin-bottom: 5px; color: #000;">Message</button>
+    </div>
+</section>
+
+  <!--Jobs block(2 card)-->
+
+  <section id="jobs">
+    <div class="card2">
+        <h1 style="color: #16446f; font-size: xx-large;">Jobs & Opportunities</h1>
+        
+        <p class="city"> Country: 
+            <select name="country_type">
+                <option value="">---select your country---</option>
+                <option value="United States">United States</option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="India">India</option>
+                <option value="Russia">Russia</option>
+                <option value="Germany">Germany</option>
+                <option value="France">France</option>
+                <option value="Japan">Japan</option>
+                <option value="Spain">Spain</option>
+                <option value="Australia">Australia</option>
+                <option value="Saudi Arabia">Saudi Arabia</option>
+                <option value="United Arab Emirates">United Arab Emirates</option>
+
+         </select>
+          </p>
+
+        <p class="city">
+            City:
+            <select name="city_type">
+                <option value="">---select your city---</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Bengaluru">Bengaluru</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Kochi">Kochi</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Kolkata">Kolkata</option>
+                <option value="Pune">Pune</option>
+                <option value="Mangalore">Mangalore</option>
+                <option value="Jaipur">Jaipur</option>
+                <option value="Salem">Salem</option>
+                <option value="Vijayawada">Vijayawada</option>
+                <option value="Thrissur">Thrissur</option>
+            </select>
+        </p>
+        <h2 style="color: #003366;">Click below to display Location</h2>
+        <p id="for_location" style="display: none;">
+            Results for <b> E block,2nd Stage,Rajajinagar,Bengaluru</b><br><a href=""> choose area</a>
+        </p><br>
+        <!--HTML DOM-->
+        <button onclick="document.getElementById('for_location').style.display='block'">Current location</button><br><br>
+    <div class="doc_jobs">
+
+      <div class="doc_jobs_1">
+      <p><strong>Emergency Medical Physician</strong><br>Spandana Super Speciality Hospital<br>Bengaluru,Karnataka</p>
+
+      <!--Animations-->
+
+      <button class="my_animation">Apply</button>
+      </div>
+
+      <div class="doc_jobs_2">
+      <p><strong>Medical Retina Specialist</strong><br>Dr Agarwals Eye Hospital<br>Bengaluru,Karnataka</p>
+      <button class="my_animation">Apply</button>
+      </div>
+
+      <div class="doc_jobs_3">
+      <p><strong>Gynecologist</strong><br>Forum Pragathi Hospital<br>Bengaluru,Karnataka</p>
+      <button class="my_animation">Apply</button>
+      </div>
+
+      <div class="doc_jobs_4">
+        <p><strong>Orthopedician Researcher</strong><br>Pheonix Hospital<br>Bengaluru,Karnataka</p>
+        <button class="my_animation">Apply</button>
+      </div>
+
+      <div class="doc_jobs_5">
+        <p><strong>Staff Nurse-OT</strong><br>NU Hospital<br>Bengaluru,Karnataka</p>
+        <button class="my_animation">Apply</button>
+      </div>
+
+      </div>
+   </section> 
+
+<!--Communities(3 card)-->
+
+    <section id="groups">
+    <div class="card3">  
+        <div class="my_opacity">   
+         
+         <h2 style="font-size: xx-large; font-weight: bold; text-align: center;"><span style="font-size: 2.5rem;"> 🩺 </span> Welcome to Clintel Communities</h2>
+         <p style="text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-weight: 550; margin-inline-start: 7%;margin-inline-end: 7%; font-size: larger;">
+            Join a vibrant network of clinicians, specialists, and researchers shaping the future of medicine.
+            Our professional communities are built exclusively for doctors and healthcare scientists who are passionate about collaboration, innovation, and lifelong learning.
+            Whether you're driving a clinical trial, exploring AI in diagnostics, or seeking insights into complex patient cases these communities offer a space to connect, discuss, and grow with like-minded professionals.</p><br>
+            
+            
+      <p style="margin:0.5cm;"><strong> Healthcare Policy & Global Health</strong></p>
+        <ul>
+            <li>Collaborate on whitepapers, reforms, or policy impact analysis</li>
+            <li>Discussing on global health funding, logistics, and collaborations</li>
+            <li>Share NGO or WHO-based initiatives</li>
+        </ul>
+        <button style="margin: 0.5cm;">Join</button>
+
+      <p style="margin: 0.5cm;"><strong>Digital Health & Telemedicine Innovation</strong></p>
+        <ul>
+            <li>Explore telehealth tech, AI diagnostics, and remote patient monitoring</li>
+            <li>Collaborate on app development, UX for clinicians/patients</li>
+            <li>Share research on virtual care outcome</li>
+        </ul>
+      <button style="margin: 0.5cm;">Join</button>
+      <p style="margin: 0.5cm;"><strong>Womens Health & Reproductive Medicine Forum</strong></p>
+      <ul>
+        <li>OB/GYN trials and fertility research</li>
+        <li>Endometriosis and PCOS study discussions</li>
+        <li>Prenatal screening technologies and ethics</li>
+      </ul>
+      <button style="margin: 0.5cm;">Join</button>
+      <p style="margin: 0.5cm;"><strong> Cardiology Innovation Group</strong></p>
+      <ul>
+        <li>Cardiovascular device trials (stents, wearables)</li>
+        <li>AI in ECG interpretation</li>
+        <li>Heart failure management protocols and new drug studies</li>
+      </ul>
+      <button style="margin: 0.5cm;">Join</button>
+      </div>
+    </div>
+</section>
+
+<!--Under communities,Events(4 card)-->
+
+<section id="groups">
+    <div class="card4">
+      <h2>Upcoming Medical & Healthcare Events in India – 2025</h2>
+      <ol>
+     <li> <strong>Healthcare Summit 2025</strong></li><br>
+      <ul type="square">
+      <li><strong>Date:</strong> June 13–14, 2025</li>
+      <li><strong>Venue:</strong> Indian Institute of Science, Bengaluru</li>
+      <li><strong>Focus:</strong> Integration of healthcare and technology, featuring global speakers, exhibitions, and networking opportunities.</li>
+      <li><strong>Details:</strong><a href=""> healthcaresummit.in </a></li>
+      </ul><br><br>
+    <li><strong>DIA India Annual Meeting 2025</strong></li><br>
+      <ul type="square">
+        <li><strong>Dates:</strong> July 19–20, 2025</li>
+        <li><strong>Venue:</strong> Hyatt Regency, Delhi</li>
+        <li><strong>Theme:</strong> “Innovation Through Integration: Shaping the Future of Patient-Centric Healthcare”</li>
+        <li><strong>Focus:</strong> Pharmaceuticals, clinical research, and regulatory affairs.</li>
+        <li><strong>Details:</strong><a href=""> diaglobal.org</a></li>
+      </ul>
+      </ol>
+    </div>
+  </section>
+
+  <!--Latest Articles(5 card)-->
+
+  <section id="articles">
+    <div class="card5">
+      <h2 style="font-weight: bold;font-size: xx-large;">Latest Articles</h2><br>
+      <p style="font-family:Arial, Helvetica, sans-serif; font-size: x-large;">Stay informed, inspired, and ahead of the curve with our curated library of medical articles. Whether you're a clinician seeking the latest evidence-based practices, a researcher exploring emerging trends, or a student hungry for learning — our collection brings together expert-written insights across every medical specialty.
+
+        Discover peer-reviewed studies, clinical case reviews, innovations in diagnostics, public health updates, and thought leadership from doctors around the world. Every article is designed to support your practice, enrich your knowledge, and connect theory with real-world application.<br><br>
+        
+      <b>  Read. Reflect. Evolve — with trusted content made for modern medicine.</b></p>
+      <span class="emoji">👉</span> <a href="article.html"> Read Articles here</a>
+    </div>
+    
+  </section>
+</body>
+</html>
+
+

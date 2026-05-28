@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles</title>
+    <style>
+         body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background:  #e6f2ff;
+      color: #003366;
+      margin: 0;
+      padding: 0;
+      
+    }
+    img{
+        float: left;
+        clip-path: circle(45%);
+        shape-outside: circle(50%);
+    }
+    div{             /* Only for top 2 docs */
+        padding: 1cm;
+    }
+
+    .recent_times{            /* Interests (big,to seperate each block but under one horizontal block) */
+        display: flex;
+        justify-content: space-evenly;
+        gap: 1cm;
+    }
+
+ /* Edits on button icon */   
+
+.btn {
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid rgb(0, 0, 0);
+  padding: 10px 20px;
+  font-size: 17px;
+  cursor: pointer;
+  font-weight: bold;
+  background: transparent;
+  position: relative;
+  transition: all 1s;
+  overflow: hidden;
+  
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  top: 0;
+  left: -40px;
+  transform: skewX(45deg);
+  background-color:  rgba(150, 205, 150, 0.801);
+  z-index: -1;
+  transition: all 1s;
+  
+}
+
+.btn:hover::before {
+    width: 160%;
+    
+}
+
+/* For bottom 3 articles */ 
+
+.card {                    /* Name of the divs */
+ 
+  max-width: 300px;
+  border-radius: 0.5rem;
+  background-color: rgba(136, 202, 235, 0.341);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  border: 1px solid transparent;
+}
+
+.card a {
+  text-decoration: none
+}
+
+.content {          
+  padding: 1.1rem;
+}
+
+.image_1{
+  object-fit: cover;
+  width: 75%;
+  height: 150px;
+  
+  background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtL9zeJjha4unPCxCHd27SbvxKebkhB-tRtQ&s');
+}
+.image_2{
+  object-fit: cover;
+  width: 75%;
+  height: 150px;
+  
+  background: url('https://news.uchicago.edu/sites/default/files/styles/explainer_hero/public/images/2022-05/cancer-immunotherapy_0.jpg?h=944f5cba&itok=mxoAjKD-');
+}
+.image_3{
+  object-fit: cover;
+  width: 75%;
+  height: 150px;
+  
+  background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5IvJEpXwJycJqolzSBfdqRyqx10QYO_7vKA&s');
+}
+
+.title {                /* Top Bolded words */
+  color: #111827;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+}
+
+.desc {                  /* Small info in box */
+  margin-top: 0.5rem;
+  color: #6B7280;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.action {                /* Find out more */
+  display: inline-flex;
+  margin-top: 1rem;
+  color: #ffffff;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  align-items: center;
+  gap: 0.25rem;
+  background-color: #2563EB;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.action span {
+  transition: .3s ease;
+}
+
+.action:hover span {
+  transform: translateX(4px);
+}
+</style>
+ </head>
+
+<body>
+    <div>
+    <h2>Dr.Stefano Tommasini</h2>
+    <h3 style="color: black;">What Pharma Needs to Know About Green Chemistry</h3>
+    <img src="https://www.theinnovationgroup.it/wp-content/uploads/2017/04/Tomasini-scaled.jpg" alt="photo" height="300">
+    <p>The pharmaceutical industry has a crucial role in modern healthcare, but it also has a significant environmental footprint. From large-scale solvent use and carbon emissions to water pollution and chemical waste, drug development and manufacturing have a considerable impact on the environment across every stage of the value chain.
+
+        Pharmaceutical operations, including production, distribution, and disposal, contribute significantly to pollution and climate change. The carbon emissions of the pharmaceutical industry have been estimated to be up to 55% higher than those of the automotive sector.Pharmaceutical waste (solvents, reagents, packaging, etc.) is a cause of concern. Pollutants reach ecosystems through various pathways: excretion of unmetabolized drugs, effluent from manufacturing plants, runoff from agricultural use, and domestic wastewater. Active pharmaceutical ingredients (APIs) and their transformation products have been found in water, soil, and even food chains.Growing environmental concerns and tighter regulations emphasize the importance of sustainability and put pressure on industries to adopt greener, more responsible practices such as green chemistry, which is among the most promising approaches.
+        Green chemistry is based on twelve principles. Among them are waste prevention, atom economy – which aims to maximize the incorporation of all materials used in the process into the final product – and the use of safer solvents and reaction conditions to reduce energy requirements and toxicity.
+
+        The energy efficiency principle recommends conducting reactions at ambient temperature and pressure, while the catalysis principle aims to use small quantities of catalysts instead of stoichiometric reagents, therefore reducing waste.
+        
+        Another principle is design for degradation, which states that chemicals should be designed so they degrade at the end of their function and do not persist in the environment.
+        
+        These principles often contrast with traditional synthetic methods that prioritize yield and speed over environmental considerations. In pharma, green chemistry means rethinking how products are synthesized, which solvents are used, and how reactions are scaled without compromising safety or quality.</p>
+    </div>
+
+    <div>
+        <h2>Dr. Sandeepta Burgula</h2>
+        <h3 style="color: black;">Rapid diagnostic test for sepsis utilizing gold nanoparticles.</h3>
+        <img src="https://www.osmania.ac.in/cfrd/images/directorcfrdsandeeptha.jpg" alt="photo" height="300">
+        <p>
+            Dr. Sandeepta Burgula is a distinguished Indian microbiologist and academic leader, renowned for her pioneering work in rapid diagnostics, hypoxia signaling, and translational biotechnology. Currently serving as the Director of the Central Facilities for Research & Development (CFRD) and Professor in the Department of Microbiology at Osmania University, Hyderabad, she has made significant contributions to both scientific research and education.
+            Dr. Burgula earned her Ph.D. in Biochemistry from Osmania University. Her research primarily focuses on cellular signaling pathways, particularly the regulation of Phosphatidylethanolamine-binding protein 1 (PEBP1) under hypoxic conditions. PEBP1 is crucial for neuronal function and is implicated in various cancers and neurological disorders. Her lab also investigates prognostic markers for predicting survivability in sepsis patients, aiming to enhance early detection and treatment strategies.
+            One of Dr. Burgula's most notable achievements is the development of a rapid, low-cost diagnostic test for sepsis using gold nanoparticles. Traditional sepsis diagnostics can take 1–2 days, but her innovative device delivers results in just 30 minutes with up to 90% accuracy. Designed for low-resource settings, the test costs only a quarter of existing methods, making it accessible for rural health centers. The device detects a specific protein in serum that spikes during sepsis, with a visible color change indicating the presence and severity of the condition. This method has been patented, and efforts are underway to commercialize the device with support from a biotechnology grant. 
+            As Director of CFRD, Dr. Burgula has been instrumental in establishing state-of-the-art research facilities at Osmania University, including equipment like Nuclear Magnetic Resonance Spectrometers and High-Performance Liquid Chromatography systems. These facilities support interdisciplinary research and are accessible to faculty, research students, and scientists. 
+            Osmania University
+
+            She has also played a pivotal role in organizing national seminars, such as the one on "Post-Pandemic Scenario: Impending Virus Research," fostering collaborations and discussions on global health challenges. 
+            Dr. Burgula's work exemplifies the integration of fundamental research with practical applications, particularly in developing accessible healthcare solutions for resource-limited settings. Her dedication to scientific excellence, education, and innovation continues to inspire and contribute significantly to the fields of microbiology and public health.
+        </p>
+    </div><br>
+
+<!--Interests-->
+
+  <p style="padding: 1cm; text-align: center; font-weight: bold; font-size: x-large;">Click on Your interested fields</p>
+<button class="btn"><a href="cardio.html">Cardiology</a></button>
+<button class="btn"><a href="">neurology</a></button>
+<button class="btn"><a href="">oncology</a></button>
+<button class="btn"><a href="">pediatrics</a></button>
+<button class="btn"><a href="">opthalmology</a></button>
+<button class="btn"><a href="">radiology</a></button>
+<button class="btn"><a href="">psychiatrist</a></button>
+<button class="btn"><a href="">dermatology</a></button>
+<button class="btn"><a href="">Dental</a></button>
+<button class="btn"><a href="">forensic medicine</a></button>
+<br><br>
+
+<!--3 articles-->
+
+<p style="text-align: center; font-weight: bold; font-size: xx-large;">Recent Times</p><br>
+ 
+<div class="recent_times">
+<div class="card">
+    <div class="image_1"></div>
+     <div class="content">
+       <a href="#">
+         <span class="title">
+            Advancements in Liquid Biopsy Techniques
+         </span>
+       </a>
+   
+       <p class="desc">
+        Liquid biopsy is emerging as a non-invasive diagnostic approach, allowing the detection of biomarkers in bodily fluids like blood. This technique is transforming cancer diagnostics by enabling early detection, monitoring treatment responses, and facilitating personalized treatment strategies without the need for traditional tissue biopsies.
+       </p>
+   
+       <a class="action" href="#">
+         Find out more
+         <span aria-hidden="true">
+           →
+         </span>
+       </a>
+     </div>
+   </div>
+
+   <div class="card">
+    <div class="image_2"></div>
+     <div class="content">
+       <a href="#">
+         <span class="title">
+            Personalized mRNA Cancer Vaccines
+         </span>
+       </a>
+   
+       <p class="desc">
+        Building on the success of mRNA technology in infectious diseases, researchers are developing personalized mRNA cancer vaccines. These vaccines are designed to stimulate the immune system to target specific tumor antigens unique to an individual's cancer, offering a promising avenue for treatment, particularly in cancers like melanoma and pancreatic cancer. 
+       </p>
+   
+       <a class="action" href="#">
+         Find out more
+         <span aria-hidden="true">
+           →
+         </span>
+       </a>
+     </div>
+   </div>
+   
+   <div class="card">
+    <div class="image_3"></div>
+     <div class="content">
+       <a href="#">
+         <span class="title">
+            Alzheimer’s Disease: Dual-Targeting Drug RI-AG03
+         </span>
+       </a>
+   
+       <p class="desc">
+        Researchers have developed a drug, RI-AG03, that successfully blocks two major Alzheimer’s disease "hotspots" simultaneously. These hotspots are associated with the abnormal buildup of tau proteins, which form tangles around brain cells and drive cognitive decline. The drug has been effective in preventing tau protein buildup both in lab dish studies and on fruit flies, where it significantly extended their lifespan.
+       </p>
+   
+       <a class="action" href="#">
+         Find out more
+         <span aria-hidden="true">
+           →
+         </span>
+       </a>
+     </div>
+   </div>
+   
+ </div>
+</body>
+</html>
+
